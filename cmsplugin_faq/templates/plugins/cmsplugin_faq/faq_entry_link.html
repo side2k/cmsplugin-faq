@@ -1,0 +1,16 @@
+
+<div class="faq-entry-link{% if css %} {{ css }}{% endif %}">
+
+    <div class="faq-entry-topic">
+        <a href="{{ url }}">
+            {{ topic|safe }}
+        </a>
+    </div>
+
+    {% if body %}
+    <div class="faq-entry-body">
+        {{ body|safe }}
+    </div>
+    {% endif %}
+
+</div>

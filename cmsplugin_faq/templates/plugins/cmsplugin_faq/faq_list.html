@@ -1,0 +1,22 @@
+
+<div class="faq-list">
+
+    <ul>
+{% for faq_entry in faq_list %}
+        <li{% if css %} class="{{ css }}"{% endif %}>
+
+            <div class="faq-entry-topic" >
+                <a href="#{{ faq_entry.id }}">
+                    {{ faq_entry.topic|safe }}
+                </a>
+            </div>
+
+            <div class="faq-entry-body">
+                {{ faq_entry.body|safe|truncatewords_html:10 }}
+            </div>
+
+        <hr>
+{% endfor %}
+    </ul>
+
+</div>
